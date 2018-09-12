@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>FLIGHTS</title>
+</head>
+<body>
+<form action="flights" method="post" onsubmit="return show()" >
+<table>
+<tr>
+ <td>SOURCE:</td> <td><select id="src" name="src">
+<option>--select--</option>
+<option value="HYDERABAD">HYDERABAD</option>
+<option value="BANGALORE">BANGALORE</option>
+<option value="KOLKATA">KOLKATA</option>
+<option value="PURULIA">PURULIA</option>
+</select>
+</td>
+<td>DESTINATION:</td><td> <select id="des" name="des">
+<option>--select--</option>
+<option value="HYDERABAD">HYDERABAD</option>
+<option value="BANGALORE">BANGALORE</option>
+<option value="KOLKATA">KOLKATA</option>
+<option value="PURULIA">PURULIA</option>
+</select>
+</td>
+<td>NO. OF TICKETS</td> 
+<td>
+<input type="number" name="not">
+</td>
+
+<td><input type="submit" value="submit" ></td>
+
+
+</tr>
+</table>
+</form>
+<script>
+	function show(){
+
+		if((document.getElementById("des").value === "--select--") && (document.getElementById("src").value === "--select--"))
+		{
+			alert("Select valid source and destination");
+			return false;
+		}
+
+		if(document.getElementById("src").value === "--select--"){
+			alert("Select a valid source");
+			return false;
+		}
+		if(document.getElementById("des").value === "--select--"){
+			alert("Select a valid destination");
+			return false;
+		}
+
+	}
+
+
+</script>
+
+</body>
+</html>
